@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Sweet Stack -- Candy Tower Game</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="game-wrap">
+  <canvas id="gameCanvas"></canvas>
+
+  <div class="hud">
+    <div class="score-badge" id="scoreBadge">0</div>
+    <div class="best-badge" id="bestBadge">Best: 0</div>
+  </div>
+
+  <div class="combo-popup hidden" id="comboPopup"></div>
+
+  <div class="screen start-screen" id="startScreen">
+    <div class="start-card">
+      <h1>SWEET <span class="accent">STACK</span></h1>
+      <p class="start-sub">Tap to drop the block. Line it up perfectly to keep the tower wide!</p>
+      <button id="startBtn" class="big-btn">Play</button>
+      <p class="best-line">Best height: <span id="startBest">0</span></p>
+    </div>
+  </div>
+
+  <div class="screen over-screen hidden" id="overScreen">
+    <div class="start-card">
+      <h2>Tower collapsed!</h2>
+      <p class="over-score">You reached <strong id="finalHeight">0</strong> blocks</p>
+      <p class="over-best" id="newBestLine"></p>
+      <button id="retryBtn" class="big-btn">Play again</button>
+    </div>
+  </div>
+
+  <div class="tap-hint hidden" id="tapHint">Tap anywhere to drop</div>
+</div>
+
+<footer class="footer">Built as a portfolio project &middot; Canvas 2D + Web Audio, no external assets</footer>
+
+<script src="game.js"></script>
+</body>
+</html>
