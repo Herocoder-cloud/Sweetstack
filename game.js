@@ -105,7 +105,7 @@ function resizeCanvas() {
   canvas.style.width = cssWidth + 'px';
   canvas.style.height = cssHeight + 'px';
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-  groundY = cssHeight - 70;
+  groundY = cssHeight * 0.62;
 }
 window.addEventListener('resize', resizeCanvas);
 
